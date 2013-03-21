@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:display="urn:jsptld:http://displaytag.sf.net" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_orko_dev_controlgastos_model_BankAccount" object="${bankaccount}" path="/bankaccounts" z="W3Mwa8jTaXATMmK+hWa1pRyNhtQ=">
+        <field:display field="description" id="s_orko_dev_controlgastos_model_BankAccount_description" object="${bankaccount}" z="LKyddp8GKplUJjM5TItVFL07uaw="/>
+        <field:display field="bank" id="s_orko_dev_controlgastos_model_BankAccount_bank" object="${bankaccount}" z="smfeO0yKQ5yqTWtpKbDOmfurtYk="/>
+        <field:display field="bankAccountType" id="s_orko_dev_controlgastos_model_BankAccount_bankAccountType" object="${bankaccount}" z="bkK8AbRPQyMV91EdFfltN3XQNjE="/>
+        <div>
+        	Saldo: $<fmt:formatNumber maxFractionDigits="2">
+                <c:out value="${balance}"/>
+            </fmt:formatNumber>
+        </div>
+        <display:table decorator="orko.dev.controlgastos.web.displayTag.decorator.BankOperationDecorator" name="${bankOperation}">
+            <display:column format="{0,date,dd-MM-yyyy}" property="date" title="Fecha"/>
+            <display:column property="bankAccountDescription" title="Descripción"/>
+            <display:column property="amount" title="Importe"/>
+        </display:table>
+        <field:display field="user" id="s_orko_dev_controlgastos_model_BankAccount_user" object="${bankaccount}" render="false" z="user-managed"/>
+    </page:show>
+</div>

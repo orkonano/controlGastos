@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_orko_dev_controlgastos_model_EconomicFact" modelAttribute="economicFact" path="/economicfacts" render="${empty dependencies}" z="QTVVsCwgJ5sZajIplHoDICjZ0Zc=">
+        <field:select field="entry" id="c_orko_dev_controlgastos_model_EconomicFact_entry" itemValue="id" items="${entrys}" path="/entrys" required="true" z="ZoFwNFjdunLK9L1TcmNhb8tK/PY="/>
+        <field:select field="budget" id="c_orko_dev_controlgastos_model_EconomicFact_budget" itemValue="id" items="${budgets}" path="/budgets" required="true" z="jYT5eT9PeEHUG8CDUVXxjXO4Uqk="/>
+        <field:input decimalMin="0.0" field="amount" id="c_orko_dev_controlgastos_model_EconomicFact_amount" required="true" validationMessageCode="field_invalid_number" z="7jxOXrbp97GiucK4pJED3m45CYs="/>
+        <field:datetime dateTimePattern="${economicFact_date_date_format}" field="date" id="c_orko_dev_controlgastos_model_EconomicFact_date" required="true" z="BWAxQRc/3YazLEeVmNwHMDBtz4A="/>
+        <field:input field="description" id="c_orko_dev_controlgastos_model_EconomicFact_description" required="true" z="9GsggGwcOeKeL7BdZIjz79CoIow="/>
+        <field:select field="bankAccount" id="c_orko_dev_controlgastos_model_EconomicFact_bankAccount" itemValue="id" items="${bankaccounts}" path="/bankaccounts" required="true" z="g96GRb0b4+sH3KX2+LXiF6onvaM="/>
+        <field:select field="user" id="c_orko_dev_controlgastos_model_EconomicFact_user" itemValue="id" items="${principals}" path="/security/users" render="false" z="user-managed"/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_orko_dev_controlgastos_model_EconomicFact" render="${not empty dependencies}" z="n/0Pb0bkSIhuLUwWZZxMiv6oLRc="/>
+</div>

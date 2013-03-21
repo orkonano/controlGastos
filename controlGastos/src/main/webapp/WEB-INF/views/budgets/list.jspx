@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_orko_dev_controlgastos_model_Budget" items="${budgets}" z="7wjqrgsDsRm6HWt38KdwnWIR22Y=">
+        <table:table data="${budgets}" id="l_orko_dev_controlgastos_model_Budget" path="/budgets" z="7+cpUYp3LIK9mpunciUSAUYqt0M=">
+            <table:column id="c_orko_dev_controlgastos_model_Budget_description" property="description" z="sPN7a9KwRTWiWusXR0QTP4Tp9pM="/>
+            <table:column id="c_orko_dev_controlgastos_model_Budget_user" property="user" render="false" z="user-managed"/>
+        </table:table>
+    </page:list>
+</div>

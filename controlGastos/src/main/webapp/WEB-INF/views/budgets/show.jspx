@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:display="urn:jsptld:http://displaytag.sf.net" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_orko_dev_controlgastos_model_Budget" object="${budget}" path="/budgets" z="IysUz2Jh5ziHwUaNS4bisOFOkBM=">
+        <field:display field="description" id="s_orko_dev_controlgastos_model_Budget_description" object="${budget}" z="HXqgTc0otoShCXlU002fhr8KFK0="/>
+        <display:table decorator="orko.dev.controlgastos.web.displayTag.decorator.BudgetListDecorator" name="${allEntries}">
+            <display:column property="description" title="Concepto"/>
+            <display:column property="presupuestado" title="Presupuestado"/>
+            <display:column property="ejecutado" title="Ejecutado"/>
+            <display:column property="porcentajeEjecutado" title="% Ejecutado"/>
+        </display:table>
+        <field:display field="user" id="s_orko_dev_controlgastos_model_Budget_user" object="${budget}" render="false" z="user-managed"/>
+    </page:show>
+</div>

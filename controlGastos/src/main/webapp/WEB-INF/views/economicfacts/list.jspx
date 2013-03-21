@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_orko_dev_controlgastos_model_EconomicFact" items="${economicfacts}" z="C6YwDJ+2khY6VHT+aEAHpsqlYA4=">
+        <table:table data="${economicfacts}" id="l_orko_dev_controlgastos_model_EconomicFact" path="/economicfacts" z="Ty48mbD4TiOR5lVkrc++CpGrTWg=">
+            <table:column id="c_orko_dev_controlgastos_model_EconomicFact_entry" property="entry" z="hTjS0SJ3UEF++lqivQE/nfjMHuw="/>
+            <table:column id="c_orko_dev_controlgastos_model_EconomicFact_budget" property="budget" z="LT8fgUcP4w3HeXwFkeTKZvbVr0c="/>
+            <table:column id="c_orko_dev_controlgastos_model_EconomicFact_amount" property="amount" z="yH1vxb1/kVL/3fGw9DNVRCMPXvI="/>
+            <table:column date="true" dateTimePattern="${economicFact_date_date_format}" id="c_orko_dev_controlgastos_model_EconomicFact_date" property="date" z="TCgyz1rLIh1DWCGsg1KDuNsUBNM="/>
+            <table:column id="c_orko_dev_controlgastos_model_EconomicFact_description" property="description" z="lVW5v76LkI8OBGh1DzuXCsQV70M="/>
+            <table:column id="c_orko_dev_controlgastos_model_EconomicFact_bankAccount" property="bankAccount" z="F6bEW4dudxCiu2m+2aD6Ms0vjP8="/>
+        </table:table>
+    </page:list>
+</div>

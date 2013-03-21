@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_orko_dev_controlgastos_model_security_Principal" items="${principals}" z="rmcKNxymwLN4I/+qCSuZWbpJckM=">
+        <table:table data="${principals}" id="l_orko_dev_controlgastos_model_security_Principal" path="/security/users" update="false" z="TelRssteZbd2y8QvTPIKS3DTyg4=">
+            <table:column id="c_orko_dev_controlgastos_model_security_Principal_username" property="username" z="p7A491ekUbc+r2tJX6N3NA4Plg0="/>
+            <table:column id="c_orko_dev_controlgastos_model_security_Principal_password" property="password" z="user-managed" render="false"/>
+            <table:column id="c_orko_dev_controlgastos_model_security_Principal_enabled" property="enabled" z="Ewd5qzUvw/gNBhxeZyVF6AltKAM="/>
+            <table:column id="c_orko_dev_controlgastos_model_security_Principal_name" property="name" z="5IbfjWkeNLMLgypmldBXM054WlE="/>
+            <table:column id="c_orko_dev_controlgastos_model_security_Principal_lastName" property="lastName" z="irZz1HgQM3QRQC71eyTyHubXJmo="/>
+            <table:column id="c_orko_dev_controlgastos_model_security_Principal_email" property="email" z="hjuC1zaqryuZKpiO/I6sj/JY03k="/>
+        </table:table>
+    </page:list>
+</div>

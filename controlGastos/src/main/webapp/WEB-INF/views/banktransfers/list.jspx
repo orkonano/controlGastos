@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_orko_dev_controlgastos_model_BankTransfer" items="${banktransfers}" z="3gYjuMN+vUx/AAYNR0fRMx1SZz4=">
+        <table:table data="${banktransfers}" id="l_orko_dev_controlgastos_model_BankTransfer" path="/banktransfers" z="QlDcZFGYpK4Egc4w3EIk7jQT2wg=">
+            <table:column id="c_orko_dev_controlgastos_model_BankTransfer_description" property="description" z="n0r/5UCkm+bL0FFTr2dJRv1zYfI="/>
+            <table:column id="c_orko_dev_controlgastos_model_BankTransfer_amount" property="amount" z="GlNrRHz2rLxvljg4zP0pswCP7+o="/>
+            <table:column date="true" dateTimePattern="${bankTransfer_date_date_format}" id="c_orko_dev_controlgastos_model_BankTransfer_date" property="date" z="W8p/1f8qIig1Wpgnk9DT6L5PdgM="/>
+            <table:column id="c_orko_dev_controlgastos_model_BankTransfer_user" property="user" render="false" z="user-managed"/>
+            <table:column id="c_orko_dev_controlgastos_model_BankTransfer_bankAccountSrc" property="bankAccountSrc" z="VuUi51AIQD7oZeW2KjgKsgsbAfU="/>
+            <table:column id="c_orko_dev_controlgastos_model_BankTransfer_bankAccountDest" property="bankAccountDest" z="pYjhK3XdkwpCYTCHrCZ7EVk99yA="/>
+        </table:table>
+    </page:list>
+</div>

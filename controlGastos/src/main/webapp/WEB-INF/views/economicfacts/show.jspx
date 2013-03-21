@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_orko_dev_controlgastos_model_EconomicFact" object="${economicfact}" path="/economicfacts" z="Qden/20gF7/pb92duZBlvbNBQ+g=">
+        <field:display field="entry" id="s_orko_dev_controlgastos_model_EconomicFact_entry" object="${economicfact}" z="feQ9yyuL6C2IbPacwGIS0gA8OxI="/>
+        <field:display field="budget" id="s_orko_dev_controlgastos_model_EconomicFact_budget" object="${economicfact}" z="eM5d7l4iHdMD66Ry5X+tN58blrg="/>
+        <field:display field="amount" id="s_orko_dev_controlgastos_model_EconomicFact_amount" object="${economicfact}" z="UU7roC03ENdDG/wAr9b79HINnxg="/>
+        <field:display date="true" dateTimePattern="${economicFact_date_date_format}" field="date" id="s_orko_dev_controlgastos_model_EconomicFact_date" object="${economicfact}" z="xhqzdEhg0xqOwmDe+PPMeH/pIxU="/>
+        <field:display field="description" id="s_orko_dev_controlgastos_model_EconomicFact_description" object="${economicfact}" z="gsHyhtGn26ZNXc0JzSRHNB7V/eM="/>
+        <field:display field="bankAccount" id="s_orko_dev_controlgastos_model_EconomicFact_bankAccount" object="${economicfact}" z="lze3ZkxDnfUMwJEYp+MYsiNhOso="/>
+        <field:display field="user" id="s_orko_dev_controlgastos_model_EconomicFact_user" object="${economicfact}" render="false" z="user-managed"/>
+    </page:show>
+</div>

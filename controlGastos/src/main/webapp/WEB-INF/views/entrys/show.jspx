@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_orko_dev_controlgastos_model_Entry" object="${entry}" path="/entrys" z="user-managed">
+        <field:display field="entryType" id="s_orko_dev_controlgastos_model_Entry_entryType" object="${entry}" z="eNAr+BsRPwvSRqcE7wuV66sfvRc="/>
+        <field:display field="description" id="s_orko_dev_controlgastos_model_Entry_description" object="${entry}" z="5t397g+D7+7Tyj2gjJAErJAAxPI="/>
+        <field:display field="attributable" id="s_orko_dev_controlgastos_model_Entry_attributable" object="${entry}" z="HksKGkDQGHf79cC54vSX+hnNwMY="/>
+        <field:display field="priority" id="s_orko_dev_controlgastos_model_Entry_priority" object="${entry}" z="jpROwNaYJHtyvo6XbqwvQs0fibM="/>
+        <field:display field="father" id="s_orko_dev_controlgastos_model_Entry_father" object="${entry}" z="qh88+eovTlOXFAu/koUSmfwQmSY="/>
+        <field:display field="user" id="s_orko_dev_controlgastos_model_Entry_user" object="${entry}" render="false" z="user-managed"/>
+    </page:show>
+</div>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_orko_dev_controlgastos_model_security_Authority" modelAttribute="authority" path="/security/roles" versionField="Version" z="lAIOAzzqm6aS2d+owOItPM3erF4=">
+        <field:input field="authority" id="c_orko_dev_controlgastos_model_security_Authority_authority" max="10" min="8" required="true" validationRegex="^ROLE_[A-Z]*" z="oau08wjIUmu5Bj+T1EOwgARaHVU="/>
+    </form:update>
+</div>

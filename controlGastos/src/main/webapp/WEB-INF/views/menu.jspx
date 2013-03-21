@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:sec="http://www.springframework.org/security/tags" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_entry" z="Gf2JwLx0KJda6eQBlEjSCHqfnjU=">
+            <menu:item id="i_entry_new" messageCode="global_menu_new" url="/entrys?form" z="JxQrqC6Ry9hUOYWberbkUDIJL4s="/>
+            <menu:item id="i_entry_list" messageCode="global_menu_list" url="/entrys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="0Wo05YGtpZ424xCQL8JwNNVtB3k="/>
+        </menu:category>
+        <menu:category id="c_budget" z="HAEDhaOBn9ImR+UWYnwwoCuAYTc=">
+            <menu:item id="i_budget_new" messageCode="global_menu_new" url="/budgets?form" z="MJq5GvraFCR3gy7fkQtsaaGDrIg="/>
+            <menu:item id="i_budget_copy" url="/budgets/budgetCopy" z="user-managed"/>
+            <menu:item id="i_budget_list" messageCode="global_menu_list" url="/budgets?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Mnin47DSlM5n1IrXNzWEcPN6rCc="/>
+        </menu:category>
+        <menu:category id="c_budgetentry" z="cRRuOkNgQANiqJ4CVosZRKaS/I0=">
+            <menu:item id="i_budgetentry_new" messageCode="global_menu_new" url="/budgetentrys?form" z="EwGoxRP/7/hZV9YB19d1w1KkVHg="/>
+            <menu:item id="i_budgetentry_list" messageCode="global_menu_list" url="/budgetentrys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="IegJWHZXPSZ0D2Uf70mHKByp36s="/>
+        </menu:category>
+        <menu:category id="c_economicfact" z="Bq3Mm6MUXCLLzGdt9OMGxEEmf9A=">
+            <menu:item id="i_economicfact_new" messageCode="global_menu_new" url="/economicfacts?form" z="yr2FKNGVkbhm6lkCq2fYzbJCBD8="/>
+            <menu:item id="i_economicfact_list" messageCode="global_menu_list" url="/economicfacts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Pbk3O7Yj9oeIFaJczr2OZsGWCic="/>
+        </menu:category>
+        <menu:category id="c_bankaccount" z="/sJoe9QioWMd3fJBXRYmCuTCf3s=">
+            <menu:item id="i_bankaccount_new" messageCode="global_menu_new" url="/bankaccounts?form" z="D/a4i20WMaToHebEcvhliiseA3Y="/>
+            <menu:item id="i_bankaccount_list" messageCode="global_menu_list" url="/bankaccounts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="oaaEmJotR3TB3eUiDvk4njre70g="/>
+        </menu:category>
+        <menu:category id="c_banktransfer" z="zx2Aqj3Sp/oaH4m+9RZTDjAYer8=">
+            <menu:item id="i_banktransfer_new" messageCode="global_menu_new" url="/banktransfers?form" z="JbCKkDup53RXnnLBAaxoA4vjER0="/>
+            <menu:item id="i_banktransfer_list" messageCode="global_menu_list" url="/banktransfers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="JmzIjVK5hKL9DLMWvTDcSOM1MYM="/>
+        </menu:category>
+        <sec:authorize access="hasRole('ROLE_SU')">
+            <menu:category id="c_principal" z="FnLFWXB/U5tWagL29D8k2ZPp4KM=">
+                <menu:item id="i_principal_new" messageCode="global_menu_new" url="/security/users?form" z="6j8zS/LbvDWl/oqZ8HUh7BeNF1I="/>
+                <menu:item id="i_principal_list" messageCode="global_menu_list" url="/security/users?page=1&amp;size=${empty param.size ? 10 : param.size}" z="8dS8JWBi//b31LIKAyhANwlewho="/>
+            </menu:category>
+            <menu:category id="c_authority" z="GIU2CEy7lITDknErfBZQNPQ7WFs=">
+                <menu:item id="i_authority_list" messageCode="global_menu_list" url="/security/roles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KdCWOMYIRNTbRpUaEFZQW1jX1YI="/>
+                <menu:item id="i_authority_new" messageCode="global_menu_new" url="/security/roles?form" z="ic1VJI/lUEk+gvBIBpev512GBag="/>
+            </menu:category>
+            <menu:category id="c_authorityprincipalassignment" z="84rVDN6WJ/Uk7yg4qXPcYJtvilI=">
+                <menu:item id="i_authorityprincipalassignment_new" messageCode="global_menu_new" url="/security/assignments?form" z="aS8SQaOLVMFADzUKt/vBn1nw3aI="/>
+                <menu:item id="i_authorityprincipalassignment_list" messageCode="global_menu_list" url="/security/assignments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="phqoEU9/Sjen2SjxV5//Ozel1iQ="/>
+            </menu:category>
+            <menu:category id="c_seleniumtests" z="PPLMd2yNB6/LSbjIWogAacRPU+Q=">
+                <menu:item id="si_seleniumtests_test" messageCode="selenium_menu_test_suite" url="/resources/selenium/test-suite.xhtml" z="wwunW/IPDcunN97u41MvMJZQ2to="/>
+            </menu:category>
+        </sec:authorize>
+        
+    </menu:menu>
+</div>

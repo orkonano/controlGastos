@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_orko_dev_controlgastos_model_security_Principal" object="${principal}" path="/security/users" update="false" z="7NVM4l3iafBNnZv8uge9NblucKE=">
+        <field:display field="username" id="s_orko_dev_controlgastos_model_security_Principal_username" object="${principal}" z="znHq1SG/2DGT5WRQX5xtfrmVHwU="/>
+        <field:display field="password" id="s_orko_dev_controlgastos_model_security_Principal_password" object="${principal}" z="user-managed" render="false"/>
+        <field:display field="enabled" id="s_orko_dev_controlgastos_model_security_Principal_enabled" object="${principal}" z="7tvupqBr+aWFhOgdZi4UQtz95dU="/>
+        <field:display field="name" id="s_orko_dev_controlgastos_model_security_Principal_name" object="${principal}" z="hGkJnfi3+zMryBVEoaUZQB7nNl0="/>
+        <field:display field="lastName" id="s_orko_dev_controlgastos_model_security_Principal_lastName" object="${principal}" z="WFcQ5n+7e0LTjOV352r9enJM5GA="/>
+        <field:display field="email" id="s_orko_dev_controlgastos_model_security_Principal_email" object="${principal}" z="MNyXhDkuUcjBsGfc5l28vSBYDe0="/>
+    </page:show>
+</div>

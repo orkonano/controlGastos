@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition extends="default" name="budgets/list">
+		<put-attribute name="body" value="/WEB-INF/views/budgets/list.jspx" />
+	</definition>
+	<definition extends="default" name="budgets/show">
+		<put-attribute name="body" value="/WEB-INF/views/budgets/show.jspx" />
+	</definition>
+	<definition extends="default" name="budgets/create">
+		<put-attribute name="body" value="/WEB-INF/views/budgets/create.jspx" />
+	</definition>
+	<definition extends="default" name="budgets/update">
+		<put-attribute name="body" value="/WEB-INF/views/budgets/update.jspx" />
+	</definition>
+	<definition extends="default" name="budgets/copyBudget">
+		<put-attribute name="body" value="/WEB-INF/views/budgets/copyBudget.jspx" />
+	</definition>
+</tiles-definitions>

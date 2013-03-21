@@ -1,0 +1,257 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-23 19:35:07
+project --topLevelPackage orko.dev.controlGastos --projectName controlGastos --java 6 --packaging WAR
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-23 19:35:09
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-23 19:37:28
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+enum type --class orko.dev.controlgastos.model.EntryType
+enum constant --name INGRESS
+// [failed] enum constant --name EXIT
+enum constant --name LOSS
+enum constant --name SAVING
+entity jpa --class orko.dev.controlgastos.model.Entry --activeRecord false --testAutomatically 
+field enum --fieldName entryType --type ~.model.EntryType --enumType STRING 
+field string --fieldName description --notNull --sizeMax 200
+field boolean --fieldName attributable 
+field number --fieldName priority --type java.lang.Integer --notNull --min 1 
+field reference --fieldName father --type ~.model.Entry --cardinality MANY_TO_ONE 
+test integration --entity ~.model.Budget
+test integration --entity ~.model.BudgetEntry
+perform test
+perform test
+perform test
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-23 20:29:04
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-26 10:48:28
+repository jpa --interface ~.repository.EntryRepository --entity ~.model.Entry
+repository jpa --interface ~.repository.BudgetRepository --entity ~.model.Budget
+repository jpa --interface ~.repository.BudgetEntryRepository --entity ~.model.BudgetEntry
+service --interface ~.service.EntryService --entity ~.model.Entry
+service --interface ~.service.BudgetService --entity ~.model.Budget
+service --interface ~.service.BudgetEntryService --entity ~.model.BudgetEntry
+web mvc setup 
+web mvc scaffold --class ~.web.EntryController --backingType ~.model.Entry
+web mvc scaffold --class ~.web.BudgetController --backingType ~.model.Budget
+web mvc scaffold --class ~.web.BudgetEntryController --backingType ~.model.BudgetEntry
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-26 11:50:29
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-27 19:07:06
+// [failed] finder list --class ~.model.Entry
+// [failed] finder list --class ~.repository.EntryRepository
+jpa setup --database MYSQL --provider HIBERNATE --hostName localhost --databaseName control_gastos --userName root --password nano
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-27 21:45:25
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-28 18:45:03
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-28 21:09:58
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-29 18:15:33
+// [failed] test integration --entity ~.util.comparator.EntryComparator
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-29 22:46:09
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-01 00:52:28
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-01 01:12:21
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-01 01:21:36
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-01 01:55:30
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-01 01:59:57
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-04 18:18:15
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-04 18:52:27
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-04 21:03:04
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-04 21:11:11
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-04 21:21:59
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-04 23:06:14
+entity jpa --class ~.model.EconomicFact --activeRecord false --testAutomatically 
+field reference --type ~.model.Entry --fieldName entry
+repository jpa --interface ~.repository.EconomicFactRepository --entity ~.model.EconomicFact
+service --interface ~.service.EconomicFactService --entity ~.model.EconomicFact
+web mvc scaffold --class ~.web.EconomicFactController --backingType ~.model.EconomicFact
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-05 00:00:18
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-06 17:50:56
+entity jpa --class ~.model.BankAccount --activeRecord false --testAutomatically 
+enum type --class ~.model.BankAccountType 
+repository jpa --interface ~.repository.BankAccountRepository
+service --interface ~.service.BankAccountService
+web mvc scaffold --class ~.web.BankAccountController --backingType ~.model.BankAccount 
+service --interface ~.service.BankAccountService --entity ~.model.BankAccount
+repository jpa --interface ~.repository.BankAccountRepository --entity ~.model.BankAccount
+service --interface ~.service.BankAccountService --entity ~.model.BankAccount
+web mvc scaffold --class ~.web.BankAccountController --backingType ~.model.BankAccount 
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-06 18:40:58
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-06 20:56:52
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-06 21:07:44
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-06 21:17:49
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-06 23:10:29
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-06 23:29:02
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-07 00:13:50
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-07 00:16:18
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-07 00:21:40
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-10 19:58:20
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-10 20:17:57
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-10 20:18:42
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-10 20:24:04
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-10 20:37:29
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-11 23:33:37
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-12 00:43:12
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-12 20:59:33
+hint
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-15 11:58:41
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-15 12:44:23
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-15 16:52:38
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-15 17:52:12
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-15 18:22:54
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-16 12:02:44
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-16 14:14:13
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-16 14:41:34
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-16 17:12:57
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-16 17:51:51
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-19 00:56:30
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-19 01:10:13
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-21 00:01:52
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-21 00:24:12
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-22 14:59:59
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-22 16:46:12
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-22 17:40:06
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-22 18:46:10
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-22 19:21:26
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-22 20:17:38
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-24 11:23:40
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-24 13:46:57
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-27 19:18:07
+security setup
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-27 19:31:23
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-31 15:53:21
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-31 16:18:35
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-31 19:09:51
+entity jpa --class ~.model.security.Principal --table security_principals
+field string --fieldName username --notNull --sizeMax 50 --sizeMin 3
+field string --fieldName password --notNull --sizeMax 50 --sizeMin 3
+field boolean --fieldName enabled
+entity jpa --class ~.model.security.Authority --table security_authorities
+field string --fieldName roleId --notNull --sizeMax 10 --sizeMin 8
+field string --fieldName authority --notNull --sizeMax 10 --sizeMin 8 --regexp ^ROLE_[A-Z]*
+entity jpa --class ~.model.security.AuthorityPrincipalAssignment --table security_role_assignments
+field reference --fieldName username --type ~.model.security.Principal
+field reference --fieldName roleId --type ~.model.security.Authority
+web mvc scaffold --class ~.web.security.UserContoller --backingType ~.model.security.Principal --path /security/users
+web mvc scaffold --class ~.web.security.RoleContoller --backingType ~.model.security.Authority --path /security/roles
+web mvc scaffold --class ~.web.security.RoleMappingContoller --backingType ~.model.security.AuthorityPrincipalAssignment --path /security/assignments
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-31 19:53:00
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-31 20:03:30
+logging setup --level INFO 
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-31 20:50:10
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-02 15:17:05
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-02 17:02:13
+entity jpa --class ~.model.security.Principal --table security_principals --activeRecord false 
+field string --fieldName username --notNull --sizeMax 50 --sizeMin 3 --unique 
+field string --fieldName password --notNull --sizeMax 50 --sizeMin 3
+field boolean --fieldName enabled
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-02 17:09:29
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-02 22:26:46
+entity jpa --class ~.model.security.Authority --table security_authorities --activeRecord false
+field string --fieldName roleId --notNull --sizeMax 10 --sizeMin 8
+field string --fieldName authority --notNull --sizeMax 10 --sizeMin 8 --regexp ^ROLE_[A-Z]*
+entity jpa --class ~.model.security.AuthorityPrincipalAssignment --table security_role_assignments --activeRecord  false
+field reference --fieldName username --type ~.model.security.Principal
+field reference --fieldName roleId --type ~.model.security.Authority
+repository jpa --interface ~.repository.PrincipalRepository --entity ~.model.security.Principal
+repository jpa --interface ~.repository.security.PrincipalRepository --entity ~.model.security.Principal
+repository jpa --interface ~.repository.security.AuthorityRepository --entity ~.model.security.Authority
+repository jpa --interface ~.repository.security.AuthorityPrincipalAssignmentRepository --entity ~.model.security.AuthorityPrincipalAssignment
+service --interface ~.service.security.PrincipalService --entity ~.model.security.Principal
+service --interface ~.service.security.AuthorityService --entity ~.model.security.Authority
+service --interface ~.service.security.AuthorityPrincipalAssignmentService --entity ~.model.security.AuthorityPrincipalAssignment
+web mvc scaffold --class ~.web.security.UserContoller --backingType ~.model.security.Principal --path /security/users
+web mvc scaffold --class ~.web.security.RoleContoller --backingType ~.model.security.Authority  --path /security/roles
+web mvc scaffold --class ~.web.security.RoleMappingContoller --backingType ~.model.security.AuthorityPrincipalAssignment --path /security/assignments
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-03 00:09:06
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-03 00:09:51
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-03 00:40:25
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-03 10:10:23
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-03 10:42:38
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-03 11:36:59
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-03 11:58:10
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-03 12:16:22
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-03 12:32:31
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-03 12:50:08
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-03 13:25:39
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-03 13:30:37
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-03 13:33:35
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-04 11:20:10
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-04 13:31:27
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-04 13:57:19
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-04 15:23:47
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-07 13:44:40
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-07 14:35:58
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-07 15:48:07
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-07 19:16:00
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-07 19:26:03
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-08 14:09:38
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-08 16:32:55
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-08 16:53:20
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-08 16:55:04
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-08 17:37:51
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-08 18:32:01
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-08 19:48:48
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-08 19:54:25
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-08 19:56:35
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-08 21:01:58
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-08 21:03:04
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-09 01:07:18
+web mvc language --code es 
+web mvc controller --class ~.web.security.ChangePasswordContoller
+web mvc controller --class ~.web.security.ChangePassword
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-09 01:26:51
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-09 15:54:26
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-09 16:10:45
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-09 16:15:35
+logging setup --level ERROR 
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-09 16:58:33
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-10 18:47:36
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-10 19:56:13
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-11 11:42:19
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-11 12:12:04
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-11 13:48:12
+selenium test --controller orko.dev.controlgastos.web.BudgetController
+selenium test --controller orko.dev.controlgastos.web.BankAccountController
+selenium test --controller orko.dev.controlgastos.web.BudgetEntryController
+selenium test --controller orko.dev.controlgastos.web.EconomicFactController
+selenium test --controller orko.dev.controlgastos.web.EntryController
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-11 15:05:07
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-12 15:18:55
+test stub --class ~.model.BudgetEntry
+// [failed] test integration --entity ~.service.BudgetServiceImpl
+test stub --class ~.service.BudgetEntryServiceImpl
+test stub --class ~.service.BudgetServiceImpl
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-12 16:51:47
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-12 16:52:49
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-12 17:43:36
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-12 18:17:05
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-15 18:33:32
+interface --class orko.dev.controlgastos.email.NotificationService
+class --class ~.email.NotificationServiceImpl
+email sender setup --hostServer smtp.gmail.com --protocol SMTP --port 587 --username marianoekfuri@gmail.com --password nano2403
+email template setup --from marianoekfuri@gmail.com --subject "Invitation to use Control de Gastos"
+focus --class ~.email.NotificationServiceImpl
+field email template --fieldName mailTemplate --class ~.email.NotificationServiceImpl
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-15 21:05:39
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-16 18:06:01
+focus --class ~.model.security.Principal
+field string --fieldName name
+field string --fieldName lastName
+field string --fieldName email
+focus --class ~.service.security.PrincipalServiceImpl
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-01-16 18:28:57
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-01-16 21:02:27
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-02 16:09:22
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-02-02 17:32:19
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-04 23:15:25
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-04 23:40:25
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-04 23:44:27
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-02-05 00:15:17
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-08 19:22:18
+entity jpa --class ~.model.BankTansfer --activeRecord false --testAutomatically 
+repository jpa --interface ~.repository.BankTransferRepository --entity ~.model.BankTansfer
+service --interface ~.service.BankTransferService --entity ~.model.BankTansfer
+web mvc scaffold --class ~.web.BankTransferController --backingType ~.model.BankTransfer
+service --interface ~.service.BankTransferService --entity ~.model.BankTransfer
+web mvc scaffold --class ~.web.BankTransferController --backingType ~.model.BankTransfer
+// [failed] test integration --entity ~.model.BankAccountType
+test integration --entity ~.model.BankTransfer
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-02-08 21:11:11
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-09 13:13:42
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-03-17 23:54:22
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-03-18 00:23:13
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-03-18 00:38:45

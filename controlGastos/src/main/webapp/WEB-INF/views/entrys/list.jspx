@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_orko_dev_controlgastos_model_Entry" items="${entrys}" z="o47mQ2BThCLoVPnm3PMGTq6SvXc=">
+        <table:table data="${entrys}" id="l_orko_dev_controlgastos_model_Entry" path="/entrys" z="KyiR6/Wz3H6haLBdGUvKtCEK5CM=">
+            <table:column id="c_orko_dev_controlgastos_model_Entry_entryType" property="entryType" z="8i4C3vTQHwTKzu5FZE0q6RfGBPg="/>
+            <table:column id="c_orko_dev_controlgastos_model_Entry_description" property="description" z="sX8ToQc3gH2vuNOBhi4we/m386Q="/>
+            <table:column id="c_orko_dev_controlgastos_model_Entry_attributable" property="attributable" z="4hRfEEk9Ua51PO6WfDlpIjETU6c="/>
+            <table:column id="c_orko_dev_controlgastos_model_Entry_priority" property="priority" z="GmxykUF/sVYS4ZiOgPF9uj4aWbQ="/>
+            <table:column id="c_orko_dev_controlgastos_model_Entry_father" property="father" z="zcCSJkHQY3N+emmISy9mJJCg/9Q="/>
+            <table:column id="c_orko_dev_controlgastos_model_Entry_user" property="user" render="false" z="user-managed"/>
+        </table:table>
+    </page:list>
+</div>

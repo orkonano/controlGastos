@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_orko_dev_controlgastos_model_BankTransfer" object="${banktransfer}" path="/banktransfers" z="xAaHAaRW/awiTodCHzArwlr+E9k=">
+        <field:display field="description" id="s_orko_dev_controlgastos_model_BankTransfer_description" object="${banktransfer}" z="L5LpG4HwuGvWVzGbc6654kZPsNQ="/>
+        <field:display field="amount" id="s_orko_dev_controlgastos_model_BankTransfer_amount" object="${banktransfer}" z="W2/xP/0p12armAiyv1/QMb0em+8="/>
+        <field:display date="true" dateTimePattern="${bankTransfer_date_date_format}" field="date" id="s_orko_dev_controlgastos_model_BankTransfer_date" object="${banktransfer}" z="LipJE3GBVGi8Bvzb5jq4vDmcZII="/>
+        <field:display field="user" id="s_orko_dev_controlgastos_model_BankTransfer_user" object="${banktransfer}" render="false" z="user-managed"/>
+        <field:display field="bankAccountSrc" id="s_orko_dev_controlgastos_model_BankTransfer_bankAccountSrc" object="${banktransfer}" z="nUpyT5LxSMh4hkIHMxNlu5MuOB0="/>
+        <field:display field="bankAccountDest" id="s_orko_dev_controlgastos_model_BankTransfer_bankAccountDest" object="${banktransfer}" z="ZBQ3Mt3X+T1uIDntxwKUJ6uv0G8="/>
+    </page:show>
+</div>
