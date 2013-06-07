@@ -71,7 +71,7 @@ public class BankAccountServiceImpl implements BankAccountService {
 
 	@Override
 	public List<BankOperation> findLastBankOperation(BankAccount bankAccount) {
-		List<BankOperation> listReturn = new ArrayList<>();
+		List<BankOperation> listReturn = new ArrayList<BankOperation> ();
 		listReturn.addAll(this.economicFactService.findLastEconomicFacts(bankAccount));
 		listReturn.addAll(this.bankTransferService.findLastBankTransfer(bankAccount));
 		Collections.sort(listReturn, new Comparator<BankOperation>(){

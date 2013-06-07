@@ -10,6 +10,7 @@
 		<!-- Configure these elements to secure URIs in your application -->
 		<intercept-url pattern="/resources/**" access="permitAll" />
 		<intercept-url pattern="/login" access="permitAll" />
+		<intercept-url pattern="/info" access="permitAll" />
 		<intercept-url pattern="/m/login" access="permitAll" />
 		<intercept-url pattern="/security/**" access="hasRole('ROLE_SU')" />
 		<intercept-url pattern="/security/users/changePassword" access="isAuthenticated()" /> 
