@@ -129,9 +129,7 @@
 	</bean>
 
 
-	<bean
-		class="orko.dev.controlgastos.web.ApplicationConversionServiceFactoryBean"
-		id="applicationConversionService" />
+	<bean class="orko.dev.controlgastos.web.ApplicationConversionServiceFactoryBean" id="applicationConversionService" />
 
 	<bean id="tokenWebValidator" class="orko.dev.springWebToken.aop.TokenWebValidator" />
 
