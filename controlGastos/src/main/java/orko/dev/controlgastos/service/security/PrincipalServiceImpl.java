@@ -1,6 +1,7 @@
 package orko.dev.controlgastos.service.security;
 
 import java.security.SecureRandom;
+import java.util.List;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import orko.dev.controlgastos.email.NotificationService;
 import orko.dev.controlgastos.model.security.Principal;
 import orko.dev.controlgastos.model.security.form.PrincipalChangePassword;
+import orko.dev.controlgastos.structs.MasiveMail;
 import orko.dev.controlgastos.util.security.PrincipalHandler;
 
 
@@ -66,5 +68,13 @@ public class PrincipalServiceImpl implements PrincipalService {
 	@Override
 	public boolean isValidActualPassword(String oldPassword) {
 		return this.principalRepository.getPasswordEncoder().matches(oldPassword, this.getPrincipalLogin().getPassword());
+	}
+	
+	@Override
+	public void enviarMailAllUser(MasiveMail masiveMail){
+		List<Principal> users = this.principalRepository.findAll();
+		for (Principal principal : users) {
+			notificationService.sendMessage(principal.getEmail(), masiveMail.getBody(), masiveMail.getSubject());
+		}
 	}
 }

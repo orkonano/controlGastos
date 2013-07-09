@@ -14,10 +14,20 @@ public class NotificationServiceImpl implements NotificationService {
     @Autowired
     private transient SimpleMailMessage templateMessage;
 
+    @Override
     public void sendMessage(String mailTo, String message) {
         org.springframework.mail.SimpleMailMessage mailMessage = new org.springframework.mail.SimpleMailMessage(templateMessage);
         mailMessage.setTo(mailTo);
         mailMessage.setText(message);
+        mailTemplate.send(mailMessage);
+    }
+    
+    @Override
+    public void sendMessage(String mailTo, String message, String subject) {
+        org.springframework.mail.SimpleMailMessage mailMessage = new org.springframework.mail.SimpleMailMessage(templateMessage);
+        mailMessage.setTo(mailTo);
+        mailMessage.setText(message);
+        mailMessage.setSubject(subject);
         mailTemplate.send(mailMessage);
     }
 }

@@ -41,6 +41,9 @@
                 <menu:item id="i_authorityprincipalassignment_new" messageCode="global_menu_new" url="/security/assignments?form" z="aS8SQaOLVMFADzUKt/vBn1nw3aI="/>
                 <menu:item id="i_authorityprincipalassignment_list" messageCode="global_menu_list" url="/security/assignments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="phqoEU9/Sjen2SjxV5//Ozel1iQ="/>
             </menu:category>
+            <menu:category id="c_masiveMail" z="FnLFWXB/U5tWagL29D8k2ZPp4KM=">
+                <menu:item id="i_masiveMail_new" messageCode="global_menu_new" url="/security/users/sendMasiveMail"/>
+            </menu:category>
             <menu:category id="c_seleniumtests" z="PPLMd2yNB6/LSbjIWogAacRPU+Q=">
                 <menu:item id="si_seleniumtests_test" messageCode="selenium_menu_test_suite" url="/resources/selenium/test-suite.xhtml" z="wwunW/IPDcunN97u41MvMJZQ2to="/>
             </menu:category>
