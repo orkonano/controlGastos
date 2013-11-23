@@ -24,7 +24,7 @@
 		<repository>
 			<id>local-repository</id>
 			<name>Custom local repository</name>
-			<url>https://www.dropbox.com/sh/gwe5a72ma2urckh/Hn6SGH3UVE/mavenRepo</url>
+			<url>https://dl.dropboxusercontent.com/u/29143313/mavenrepo</url>
 		</repository>
 		<repository>
 			<id>spring-maven-release</id>
