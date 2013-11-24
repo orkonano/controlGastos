@@ -18,6 +18,7 @@ public class NotificationServiceImpl implements NotificationService {
     public void sendMessage(String mailTo, String message) {
         org.springframework.mail.SimpleMailMessage mailMessage = new org.springframework.mail.SimpleMailMessage(templateMessage);
         mailMessage.setTo(mailTo);
+        
         mailMessage.setText(message);
         mailTemplate.send(mailMessage);
     }
