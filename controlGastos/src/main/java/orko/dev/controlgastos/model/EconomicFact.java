@@ -29,7 +29,7 @@ public class EconomicFact implements Owneable<Principal>,BankOperation<Long>{
 
     @Override
 	public String getBankAccountDescription() {
-		return this.description;
+		return this.entry.getDescription()+" - "+ this.description;
 	}
 
 	@ManyToOne

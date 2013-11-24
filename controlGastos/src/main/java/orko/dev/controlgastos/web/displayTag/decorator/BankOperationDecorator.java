@@ -4,7 +4,6 @@ import java.text.Format;
 import java.text.NumberFormat;
 
 import org.displaytag.decorator.TableDecorator;
-import org.hamcrest.core.IsInstanceOf;
 
 import orko.dev.controlgastos.model.BankAccount;
 import orko.dev.controlgastos.model.BankTransfer;
@@ -18,14 +17,14 @@ public class BankOperationDecorator extends TableDecorator {
 	private Format formatoImporte = NumberFormat.getCurrencyInstance();
 	
 	public String getAmount(){
-		BankOperation bankOperation = (BankOperation) this.getCurrentRowObject();
+		BankOperation<?> bankOperation = (BankOperation<?>) this.getCurrentRowObject();
 		A link = new A();
-		link.setHref("../economicfacts/"+bankOperation.getId());
+		link.setHref(this.getUrl(bankOperation)+bankOperation.getId());
 		link.appendText(formatoImporte.format(this.isNegativeResult(bankOperation)?bankOperation.getAmount().negate():bankOperation.getAmount()).toString());
 		return link.write();
 	}
 	
-	private String getUrl(BankOperation bankOperation){
+	private String getUrl(BankOperation<?> bankOperation){
 		if (bankOperation instanceof EconomicFact){
 			return "../economicfacts/";
 		}else{
