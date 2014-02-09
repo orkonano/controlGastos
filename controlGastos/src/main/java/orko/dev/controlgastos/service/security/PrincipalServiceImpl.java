@@ -34,12 +34,12 @@ public class PrincipalServiceImpl implements PrincipalService {
 
 	@Transactional
 	public void savePrincipal(Principal principal) {
-		String password = RandomStringUtils.random(8, 0, 0, true, true, null, new SecureRandom());
+		String password = "12345678";//RandomStringUtils.random(8, 0, 0, true, true, null, new SecureRandom());
 		principal.setPassword(password);
         principalRepository.save(principal);
         assignmentService.saveDefaultRole(principal);
-        String message = this.getMailLoginMessage(principal,password);
-        this.notificationService.sendMessage(principal.getEmail(), message);
+//        String message = this.getMailLoginMessage(principal,password);
+//        this.notificationService.sendMessage(principal.getEmail(), message);
     }
 	
 	private String getMailLoginMessage(Principal principal, String password) {
